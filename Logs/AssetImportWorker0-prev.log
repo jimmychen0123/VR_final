@@ -1,0 +1,218 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 7542 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/jimmy/Documents/VR_final_project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50249
+Successfully changed project path to: C:/Users/jimmy/Documents/VR_final_project
+C:/Users/jimmy/Documents/VR_final_project
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 168.64 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 3.93 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/jimmy/Documents/VR_final_project/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) Graphics (ID=0x1636)
+    Vendor:   
+    VRAM:     3771 MB
+    Driver:   27.20.11028.10001
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56680
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005317 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 99.11 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.40 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.760 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.019901 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 79.92 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.40 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+[XR] OculusXRPlugin: registering subsystems
+[XR] Unable to register display lifecyle provider: [1]
+[XR] Oculus Input lifecycle provider registered.
+[XR] Unable to register input lifecyle provider: [1]
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\jimmy\Documents\VR_final_project\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\jimmy\Documents\VR_final_project\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.994 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 1.36 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.55 ms.
+Unloading 2019 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.7 MB.
+System memory in use after: 91.7 MB.
+
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 2432.
+Total: 6.456300 ms (FindLiveObjects: 0.874300 ms CreateObjectMapping: 0.131400 ms MarkObjects: 5.190600 ms  DeleteObjects: 0.253900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes
+  artifactKey: Guid(76489db4a4d170b489b969f68dbaaf12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(76489db4a4d170b489b969f68dbaaf12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b6647906d2a7364c08152d14dc603f7') in 0.043677 seconds
+  Import took 0.051757 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 69.826721 seconds.
+  path: Assets/VRSYS/Scripts
+  artifactKey: Guid(f98c4b9857c098648ba44de2a6f307ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VRSYS/Scripts using Guid(f98c4b9857c098648ba44de2a6f307ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8643a811ef3e4287f096ebe718af597') in 0.052087 seconds
+  Import took 0.062169 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.580659 seconds.
+  path: Assets/VRSYS/Scripts/ViewingSetup
+  artifactKey: Guid(0a04932581047cf40b03ff22da82d540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VRSYS/Scripts/ViewingSetup using Guid(0a04932581047cf40b03ff22da82d540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12dd9aa4a8aeff095d897b34a3205857') in 0.059761 seconds
+  Import took 0.070568 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003095 seconds.
+  path: Assets/VRSYS/Scripts/ViewingSetup
+  artifactKey: Guid(0a04932581047cf40b03ff22da82d540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VRSYS/Scripts/ViewingSetup using Guid(0a04932581047cf40b03ff22da82d540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12dd9aa4a8aeff095d897b34a3205857') in 0.052833 seconds
+  Import took 0.060539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.816334 seconds.
+  path: Assets/VRSYS/Scripts/Avatar
+  artifactKey: Guid(ece2e3fdc94591f469f6c70269986f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VRSYS/Scripts/Avatar using Guid(ece2e3fdc94591f469f6c70269986f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6ec6d145f3803055a1bf9529c4e300d') in 0.056992 seconds
+  Import took 0.067695 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.726510 seconds.
+  path: Assets/VRSYS/Scripts/Avatar/AvatarAnatomy.cs
+  artifactKey: Guid(271e64cc1cd418f4f88e135e76f8e239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VRSYS/Scripts/Avatar/AvatarAnatomy.cs using Guid(271e64cc1cd418f4f88e135e76f8e239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eaef01f25243ecd422f569d954151de') in 0.198104 seconds
+  Import took 0.205142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.252730 seconds.
+  path: Assets/VRSYS/Scripts/Avatar/AvatarDesktopAnatomy.cs
+  artifactKey: Guid(584721a485b643549a007bca413096f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VRSYS/Scripts/Avatar/AvatarDesktopAnatomy.cs using Guid(584721a485b643549a007bca413096f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21476c33367b57eb6105c30e50f4c749') in 0.048254 seconds
+  Import took 0.058570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004657 seconds.
+  path: Assets/VRSYS/Scripts/Avatar/AvatarDesktopAnatomy.cs
+  artifactKey: Guid(584721a485b643549a007bca413096f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VRSYS/Scripts/Avatar/AvatarDesktopAnatomy.cs using Guid(584721a485b643549a007bca413096f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21476c33367b57eb6105c30e50f4c749') in 0.045708 seconds
+  Import took 0.054337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.306242 seconds.
+  path: Assets/VRSYS/Scripts/Avatar/AvatarHMDAnatomy.cs
+  artifactKey: Guid(54f54519aa947fe47ab77d197bd176b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VRSYS/Scripts/Avatar/AvatarHMDAnatomy.cs using Guid(54f54519aa947fe47ab77d197bd176b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6765a3e3f12691a9f1556cfb2c3e26b2') in 0.054398 seconds
+  Import took 0.069106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003774 seconds.
+  path: Assets/VRSYS/Scripts/Avatar/AvatarHMDAnatomy.cs
+  artifactKey: Guid(54f54519aa947fe47ab77d197bd176b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VRSYS/Scripts/Avatar/AvatarHMDAnatomy.cs using Guid(54f54519aa947fe47ab77d197bd176b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6765a3e3f12691a9f1556cfb2c3e26b2') in 0.050183 seconds
+  Import took 0.060823 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.712402 seconds.
+  path: Assets/VRSYS/Scripts/Avatar/NetworkAvatar.cs
+  artifactKey: Guid(7474cceac771cba48a732fa92b4e65de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VRSYS/Scripts/Avatar/NetworkAvatar.cs using Guid(7474cceac771cba48a732fa92b4e65de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fe8a52ef22aa019644b3d47aa6199a2') in 0.050934 seconds
+  Import took 0.059841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.094474 seconds.
+  path: Assets/VRSYS/Scripts/Avatar/VerticalTorsoEstimation.cs
+  artifactKey: Guid(1e1351d0aa2d66246838ca578caf7139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VRSYS/Scripts/Avatar/VerticalTorsoEstimation.cs using Guid(1e1351d0aa2d66246838ca578caf7139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73dd38b6aa558a3b505c80380cacb3cc') in 0.055852 seconds
+  Import took 0.065632 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011350 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.19 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\jimmy\Documents\VR_final_project\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\jimmy\Documents\VR_final_project\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.328 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.53 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.25 ms.
+Unloading 1988 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.6 MB.
+System memory in use after: 90.7 MB.
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2435.
+Total: 3.647900 ms (FindLiveObjects: 0.330700 ms CreateObjectMapping: 0.118900 ms MarkObjects: 3.109000 ms  DeleteObjects: 0.087600 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
