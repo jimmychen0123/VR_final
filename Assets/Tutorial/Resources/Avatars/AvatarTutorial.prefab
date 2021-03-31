@@ -869,6 +869,7 @@ GameObject:
   - component: {fileID: 5291293095606071847}
   - component: {fileID: 6216427456837833931}
   - component: {fileID: 4221650693200308370}
+  - component: {fileID: -3390670065838038752}
   m_Layer: 0
   m_Name: AvatarTutorial
   m_TagString: Untagged
@@ -911,6 +912,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 4221650693200308370}
+  - {fileID: -3390670065838038752}
   - {fileID: 908870323834635486}
   sceneViewId: 1
   InstantiationId: 0
@@ -972,6 +974,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58be0e9f9f8795343aa771ea1a8c1dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3390670065838038752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5616724793791135168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc94e2cebd34ec4395c91c69d31e4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightHand: {fileID: 0}
+  l: {fileID: 0}
+  rightXRController: {fileID: 0}
 --- !u!1 &6408004196136113667
 GameObject:
   m_ObjectHideFlags: 0

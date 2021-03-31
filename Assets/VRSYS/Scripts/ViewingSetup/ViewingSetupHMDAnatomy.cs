@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 namespace Vrsys
 {
@@ -20,10 +22,14 @@ namespace Vrsys
             if (leftController == null)
             {
                 leftController = transform.Find("Camera Offset/Left Controller").gameObject;
+                leftController.AddComponent<XRController>();
+
             }
             if (rightController == null)
             {
-                leftController = transform.Find("Camera Offset/Right Controller").gameObject;
+                rightController = transform.Find("Camera Offset/Right Controller").gameObject;
+                rightController.AddComponent<XRController>();
+
             }
         }
     }

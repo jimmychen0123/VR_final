@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 namespace Vrsys 
 {
@@ -19,10 +21,12 @@ namespace Vrsys
             if (handLeft == null)
             {
                 handLeft = transform.Find("HandLeft").gameObject;
+                //handLeft.AddComponent<XRController>();
             }
             if (handRight == null)
             {
                 handRight = transform.Find("HandRight").gameObject;
+                //handRight.AddComponent<XRController>();
             }
         }
 
