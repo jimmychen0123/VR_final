@@ -308,7 +308,7 @@ MonoBehaviour:
   transitionDuration: 1
   considerTargetNormal: 1
   maxDeviationAngle: 65
-  posePreviewGeometry: {fileID: 909306212828823937, guid: 4b7d73de52195d745b3c5cde4c4b49e4, type: 3}
+  posePreviewGeometry: {fileID: 58528523657214712, guid: 9d7c16ebe6798c44f854006aacf18f78, type: 3}
 --- !u!114 &3363963088463403244
 MonoBehaviour:
   m_ObjectHideFlags: 0
