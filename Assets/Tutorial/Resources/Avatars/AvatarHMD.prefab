@@ -239,7 +239,6 @@ GameObject:
   - component: {fileID: 3095833923386247850}
   - component: {fileID: 9127397395763721932}
   - component: {fileID: -4902565889368000898}
-  - component: {fileID: -6452768231711242124}
   m_Layer: 0
   m_Name: AvatarHMD
   m_TagString: Untagged
@@ -351,24 +350,6 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   rightXRController: {fileID: 0}
   endRay: {x: 0, y: 0, z: 0}
---- !u!114 &-6452768231711242124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3475857724872978408}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7448815bd5148434682b3d931066cd10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RigBaseGameObject: {fileID: 3475857724872978408}
-  m_CameraFloorOffsetObject: {fileID: 5624738095747715005, guid: 9e0e0556130fdcc49a039462cc808cd6, type: 3}
-  m_CameraGameObject: {fileID: 5624738095747715005, guid: 9e0e0556130fdcc49a039462cc808cd6, type: 3}
-  m_TrackingOriginMode: 2
-  m_TrackingSpace: 3
-  m_CameraYOffset: 1.36144
 --- !u!1 &4645440255752730538
 GameObject:
   m_ObjectHideFlags: 0
