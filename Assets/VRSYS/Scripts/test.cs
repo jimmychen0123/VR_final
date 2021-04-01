@@ -10,7 +10,7 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
 {
     int press = 0;
     public GameObject rightHand;
-    public LineRenderer l;
+    public LineRenderer lineRenderer;
     //private UnityEngine.XR.InputDevice rightXRInputDevice;
     public  XRController rightXRController;
     public Vector3 endRay;
@@ -34,15 +34,15 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
             if(press == 1)
             {
 
-                l.enabled = true;
-                l.positionCount = 2;
-                l.SetPosition(0, rightHand.transform.position);
-                l.SetPosition(1, endRay);
+                lineRenderer.enabled = true;
+                lineRenderer.positionCount = 2;
+                lineRenderer.SetPosition(0, rightHand.transform.position);
+                lineRenderer.SetPosition(1, endRay);
 
             }
             else
             {
-                l.enabled = false;
+                lineRenderer.enabled = false;
 
             }
             
@@ -62,10 +62,10 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
             
         press = 0;
         rightHand = GetComponent<Vrsys.AvatarHMDAnatomy>().handRight;
-        l = rightHand.GetComponent<LineRenderer>();
-        l.startWidth = 0.1f;
-        l.positionCount = 0;
-        l.enabled = false;
+        lineRenderer = rightHand.GetComponent<LineRenderer>();
+        lineRenderer.startWidth = 0.1f;
+        lineRenderer.positionCount = 0;
+        lineRenderer.enabled = false;
 
         if (photonView.IsMine)
         {
@@ -106,17 +106,17 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
             if (trigger > 0.1f)
             {
                 endRay = rightHand.transform.position + rightHand.transform.forward * 2;
-                l.enabled = true;
-                l.positionCount = 2;
-                l.SetPosition(0, rightHand.transform.position);
-                l.SetPosition(1, endRay);
+                lineRenderer.enabled = true;
+                lineRenderer.positionCount = 2;
+                lineRenderer.SetPosition(0, rightHand.transform.position);
+                lineRenderer.SetPosition(1, endRay);
                 press = 1;
 
             }
             else
             {
                 press = 0;
-                l.enabled = false;
+                lineRenderer.enabled = false;
 
 
             }
