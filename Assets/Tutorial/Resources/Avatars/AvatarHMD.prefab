@@ -239,6 +239,8 @@ GameObject:
   - component: {fileID: 3095833923386247850}
   - component: {fileID: 9127397395763721932}
   - component: {fileID: -4902565889368000898}
+  - component: {fileID: 3330569000049754139}
+  - component: {fileID: 7148979249236251239}
   m_Layer: 0
   m_Name: AvatarHMD
   m_TagString: Untagged
@@ -283,6 +285,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: -4902565889368000898}
+  - {fileID: 7148979249236251239}
   - {fileID: 8383641615106301454}
   - {fileID: 5374621343036212069}
   - {fileID: 828422444328196804}
@@ -350,6 +353,46 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   rightXRController: {fileID: 0}
   endRay: {x: 0, y: 0, z: 0}
+--- !u!114 &3330569000049754139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3475857724872978408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621fac34feb191b4fb9bd0d22f8a3552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childAttachmentRoot: {fileID: 0}
+  mainCamera: {fileID: 0}
+  leftController: {fileID: 0}
+  rightController: {fileID: 0}
+--- !u!114 &7148979249236251239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3475857724872978408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e793add759dc21c4798a5a8e382b94c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  activeIntersectionMode: 0
+  parabolaVel: 10
+  maxSegmentCount: 50
+  segmentLength: 0.3
+  activeTransitionMode: 0
+  transitionDuration: 1
+  considerTargetNormal: 1
+  maxDeviationAngle: 65
+  posePreviewGeometry: {fileID: 0}
 --- !u!1 &4645440255752730538
 GameObject:
   m_ObjectHideFlags: 0
