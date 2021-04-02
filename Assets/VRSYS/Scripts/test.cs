@@ -47,6 +47,7 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     // YOUR CODE (IF NEEDED) - BEGIN 
     private float height = 1.0f;
     private Vector3 avatarDirection;
+    public GameObject posePreviewGeometry;
 
     // YOUR CODE - END    
 
@@ -161,7 +162,7 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
                 jumpingPositionPreview.GetComponent<MeshRenderer>().material = previewMaterial;
                 jumpingPositionPreview.SetActive(false); // hide
 
-                jumpingPersonPreview = Instantiate(Resources.Load("RealisticAvatar.prefab"), startPosition, startRotation) as GameObject;
+                jumpingPersonPreview = Instantiate(posePreviewGeometry);
                 jumpingPersonPreview.layer = LayerMask.NameToLayer("Ignore Raycast");
                 jumpingPersonPreview.SetActive(false);
 
@@ -185,7 +186,7 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     {
         
 
-        if (photonView.IsMine)
+        if (PhotonNetwork.IsMasterClient)
         {
 
             
@@ -196,28 +197,75 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
 
             //}
 
-            float trigger = 0.0f;
+            //float trigger = 0.0f;
             //rightXRController.inputDevice.TryGetFeatureValue(CommonUsages.trigger, out trigger);
 
             //bool primaryGB = false;
             //rightXRInputDevice.TryGetFeatureValue(CommonUsages.gripButton, out primaryGB);
 
-            if (trigger > 0.1f)
+            //if (trigger > 0.1f)
+            //{
+            //    endRay = rightHand.transform.position + rightHand.transform.forward * 2;
+            //    lineRenderer.enabled = true;
+            //    lineRenderer.positionCount = 2;
+            //    lineRenderer.SetPosition(0, rightHand.transform.position);
+            //    lineRenderer.SetPosition(1, endRay);
+            //    press = 1;
+
+            //}
+            //else
+            //{
+            //    press = 0;
+            //    lineRenderer.enabled = false;
+
+
+            //}
+            UpdateOffsetToCenter();
+
+            if (rightHandController != null) // guard
             {
-                endRay = rightHand.transform.position + rightHand.transform.forward * 2;
-                lineRenderer.enabled = true;
-                lineRenderer.positionCount = 2;
-                lineRenderer.SetPosition(0, rightHand.transform.position);
-                lineRenderer.SetPosition(1, endRay);
-                press = 1;
+                // mapping: grip button (middle finger)
+                //float grip = 0.0f;
+                //rightXRController.inputDevice.TryGetFeatureValue(CommonUsages.grip, out grip);
 
-            }
-            else
-            {
-                press = 0;
-                lineRenderer.enabled = false;
+                // mapping: joystick
+                //Vector2 joystick;
+                //rightXRController.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out joystick);
 
+                // mapping: primary button (A)
+                //bool primaryButton = false;
+                //rightXRController.inputDevice.TryGetFeatureValue(CommonUsages.primaryButton, out primaryButton);
 
+                // mapping: trigger (index finger)
+                float trigger = 0.0f;
+                rightXRController.inputDevice.TryGetFeatureValue(CommonUsages.trigger, out trigger);
+
+                UpdateRayVisualization(trigger, 0.00001f);
+
+                // YOUR CODE - BEGIN
+                //before teleporting, check if the trigger button is fully pressed 
+                if (rightXRController.inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out triggerPressed)
+                    &&
+                    triggerPressed)
+                {
+                    //https://gamedevbeginner.com/coroutines-in-unity-when-and-how-to-use-them/
+                    StartCoroutine(Teleport());
+                }//end if trigger button pressed
+                 // YOUR CODE - END    
+
+                // mapping: secondary button (B)
+                bool secondaryButton = false;
+                rightXRController.inputDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out secondaryButton);
+
+                if (secondaryButton != secondaryButtonLF) // state changed
+                {
+                    if (secondaryButton) // up (0->1)
+                    {
+                        ResetXRRig();
+                    }
+                }
+
+                secondaryButtonLF = secondaryButton;
             }
 
         }
@@ -226,4 +274,146 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
        
         
     }
+
+    private void UpdateOffsetToCenter()
+    {
+        // Calculate the offset between the platform center and the camera in the xz plane
+        Vector3 a = transform.position;
+        Vector3 b = new Vector3(mainCamera.transform.position.x, this.transform.position.y, mainCamera.transform.position.z);
+        centerOffset = b - a;
+
+        // visualize the offset as a line on the ground
+        offsetRenderer.positionCount = 2; // line renderer visualizes a line between N (here 2) vertices
+        offsetRenderer.SetPosition(0, a); // set pos 1
+        offsetRenderer.SetPosition(1, b); // set pos 2
+
+    }
+
+    private void UpdateRayVisualization(float inputValue, float threshold)
+    {
+        // Visualize ray if input value is bigger than a certain treshhold
+        if (inputValue > threshold && rayOnFlag == false)
+        {
+            rightRayRenderer.enabled = true;
+            rayOnFlag = true;
+        }
+        else if (inputValue < threshold && rayOnFlag)
+        {
+            rightRayRenderer.enabled = false;
+            rayOnFlag = false;
+        }
+
+        // update ray length and intersection point of ray
+        if (rayOnFlag)
+        { // if ray is on
+            
+            // Check if something is hit and set hit point
+            if (Physics.Raycast(rightHandController.transform.position,
+                                rightHandController.transform.TransformDirection(Vector3.forward),
+                                out hit, Mathf.Infinity, myLayerMask))
+            {
+                rightRayRenderer.SetPosition(0, rightHandController.transform.position);
+                rightRayRenderer.SetPosition(1, hit.point);
+
+                rightRayIntersectionSphere.SetActive(true);
+                rightRayIntersectionSphere.transform.position = hit.point;
+            }
+            else
+            { // if nothing is hit set ray length to 100
+                rightRayRenderer.SetPosition(0, rightHandController.transform.position);
+                rightRayRenderer.SetPosition(1, rightHandController.transform.position + rightHandController.transform.TransformDirection(Vector3.forward) * 100);
+
+                rightRayIntersectionSphere.SetActive(false);
+            }
+        }
+        else
+        {
+            rightRayIntersectionSphere.SetActive(false);
+        }
+    }
+
+    // YOUR CODE (ADDITIONAL FUNCTIONS)- BEGIN
+
+    IEnumerator Teleport()
+    {
+        //store jumping location while preview is not yet activated
+        //and the postion is located(intersection)
+        while (!jumpingPositionPreview.activeSelf && rightRayIntersectionSphere.activeSelf)
+        {
+            //this allows to store the jumping location while user slightly presss the trigger for ray intersection
+            setJumpingPosition();
+            //set and activate the preview 
+            setJumpingPositionPersonPreview();
+            //what follow yield return will specify how long Unity will wait before continuing
+            //execution will pause and be resumed the following frame
+            yield return null;
+
+        }
+        //update the avatars direction
+        while (rayOnFlag)
+        {
+            //store the avatars direction before releasing the trigger button
+            // Determine which direction to rotate towards
+            //https://answers.unity.com/questions/254130/how-do-i-rotate-an-object-towards-a-vector3-point.html
+            //https://docs.unity3d.com/ScriptReference/Quaternion.Slerp.html
+
+            avatarDirection = (rightRayIntersectionSphere.transform.position - jumpingPersonPreview.transform.position).normalized;
+
+            rotTowardsHit.SetLookRotation(avatarDirection);
+
+
+            jumpingPersonPreview.transform.rotation = Quaternion.Slerp(jumpingPersonPreview.transform.rotation, rotTowardsHit, Time.deltaTime);
+
+
+            //https://docs.unity3d.com/ScriptReference/WaitUntil.html
+            yield return new WaitUntil(() => !triggerPressed);
+
+            //while fully press the trigger button, if there is no ray intersection, user would not be teleported but facing the ray direction 
+        }
+
+        UpdateUserPositionDirection();
+        jumpingPositionPreview.SetActive(false);
+        jumpingPersonPreview.SetActive(false);
+
+
+    }
+
+
+    private void setJumpingPosition()
+    {
+
+        jumpingTargetPosition = hit.point;
+
+    }// end setJumpingPosition()
+
+
+    private void setJumpingPositionPersonPreview()
+    {
+        jumpingPositionPreview.transform.position = jumpingTargetPosition;
+        jumpingPositionPreview.SetActive(true);
+        //set the distance from avatar to position preview sphere
+        jumpingPersonPreview.transform.position = new Vector3(jumpingTargetPosition.x, jumpingTargetPosition.y + height, jumpingTargetPosition.z);
+        jumpingPersonPreview.SetActive(true);
+
+
+
+
+    }//end UpdateJumpingPositionPreview()
+
+
+    private void UpdateUserPositionDirection()
+    {
+
+        gameObject.transform.position = jumpingTargetPosition;
+        gameObject.transform.rotation = rotTowardsHit;
+    }
+    // YOUR CODE - END 
+
+    private void ResetXRRig()
+    {
+        transform.position = startPosition;
+        transform.rotation = startRotation;
+    }
 }
+
+

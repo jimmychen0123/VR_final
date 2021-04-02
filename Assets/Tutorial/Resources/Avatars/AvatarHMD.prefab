@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 3095833923386247850}
   - component: {fileID: 9127397395763721932}
   - component: {fileID: -4902565889368000898}
-  - component: {fileID: 434179262056561969}
+  - component: {fileID: 6280972639402313524}
   m_Layer: 0
   m_Name: AvatarHMD
   m_TagString: Untagged
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3475857724872978408}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abc94e2cebd34ec4395c91c69d31e4d2, type: 3}
   m_Name: 
@@ -354,15 +354,16 @@ MonoBehaviour:
   triggerReleased: 0
   myLayerMask:
     serializedVersion: 2
-    m_Bits: 0
---- !u!120 &434179262056561969
+    m_Bits: 4294967295
+  posePreviewGeometry: {fileID: 58528523657214712, guid: 9d7c16ebe6798c44f854006aacf18f78, type: 3}
+--- !u!120 &6280972639402313524
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3475857724872978408}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
