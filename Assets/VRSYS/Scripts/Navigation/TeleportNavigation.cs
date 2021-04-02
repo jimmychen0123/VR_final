@@ -1,10 +1,11 @@
+using Photon.Pun;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
 namespace Vrsys
 {
-    public class TeleportNavigation : NavigationBaseHMD
+    public class TeleportNavigation : NavigationBaseHMD, IPunObservable
     {
         public LayerMask myLayerMask = -1; // -1 everything
 
@@ -42,6 +43,44 @@ namespace Vrsys
         private Quaternion animationTargetRot = Quaternion.identity;
 
         public GameObject posePreviewGeometry;
+
+        public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+        {
+            if (stream.IsWriting)
+            {
+                stream.SendNext(gripButton);
+                //stream.SendNext(endRay);
+            }
+            else
+            {
+                //int p = (int)stream.ReceiveNext();
+                //press = p;
+                //if (press != 0)
+                //{
+                //    Debug.Log("receive: " + press);
+                //}
+
+                //Vector3 end = (Vector3)stream.ReceiveNext();
+                //if (press == 1)
+                //{
+
+                //    lineRenderer.enabled = true;
+                //    lineRenderer.positionCount = 2;
+                //    lineRenderer.SetPosition(0, rightHand.transform.position);
+                //    lineRenderer.SetPosition(1, endRay);
+
+                //}
+                //else
+                //{
+                //    lineRenderer.enabled = false;
+
+                //}
+
+
+
+            }
+
+        }
 
         // Start is called before the first frame update
         protected override void Start()
