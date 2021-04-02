@@ -57,9 +57,33 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
         {
             //stream.SendNext(press);
             //stream.SendNext(endRay);
+            stream.SendNext(triggerPressed);
+            stream.SendNext(hit);
         }
         else
         {
+            this.triggerPressed = (bool)stream.ReceiveNext();
+            RaycastHit rh = (RaycastHit)stream.ReceiveNext();
+            Debug.Log("receive: " + this.triggerPressed);
+            if (this.triggerPressed)
+            {
+                Debug.Log("Did you see the ray?");
+                rightRayRenderer.enabled = true;
+                rightRayRenderer.positionCount = 2;
+                rightRayRenderer.SetPosition(0, rightHand.transform.position);
+                rightRayRenderer.SetPosition(1, rh.point);
+
+
+
+            }
+
+            else
+            {
+                Debug.Log("Let's go together");
+                rightRayRenderer.enabled = false;
+
+
+            }
             //int p = (int)stream.ReceiveNext();
             //press = p;
             //if (press != 0)
@@ -82,7 +106,7 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
             //    lineRenderer.enabled = false;
 
             //}
-            
+
 
 
         }
