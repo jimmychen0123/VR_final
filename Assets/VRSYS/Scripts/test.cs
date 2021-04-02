@@ -54,33 +54,33 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     {
         if (stream.IsWriting)
         {
-            stream.SendNext(press);
-            stream.SendNext(endRay);
+            //stream.SendNext(press);
+            //stream.SendNext(endRay);
         }
         else
         {
-            int p = (int)stream.ReceiveNext();
-            press = p;
-            if (press != 0)
-            {
-                Debug.Log("receive: " + press);
-            }
+            //int p = (int)stream.ReceiveNext();
+            //press = p;
+            //if (press != 0)
+            //{
+            //    Debug.Log("receive: " + press);
+            //}
 
-            Vector3 end = (Vector3)stream.ReceiveNext();
-            if(press == 1)
-            {
+            //Vector3 end = (Vector3)stream.ReceiveNext();
+            //if(press == 1)
+            //{
 
-                lineRenderer.enabled = true;
-                lineRenderer.positionCount = 2;
-                lineRenderer.SetPosition(0, rightHand.transform.position);
-                lineRenderer.SetPosition(1, endRay);
+            //    lineRenderer.enabled = true;
+            //    lineRenderer.positionCount = 2;
+            //    lineRenderer.SetPosition(0, rightHand.transform.position);
+            //    lineRenderer.SetPosition(1, endRay);
 
-            }
-            else
-            {
-                lineRenderer.enabled = false;
+            //}
+            //else
+            //{
+            //    lineRenderer.enabled = false;
 
-            }
+            //}
             
 
 
@@ -128,7 +128,7 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
             if (rightHandController != null) // guard
             {
                 rightXRController = transform.GetParentComponent<Vrsys.ViewingSetupHMDAnatomy>().rightController.GetComponent<XRController>();
-                rightRayRenderer = rightHandController.AddComponent<LineRenderer>();
+                rightRayRenderer = rightHandController.GetComponent<LineRenderer>();
                 rightRayRenderer.name = "Right Ray Renderer";
                 rightRayRenderer.startWidth = 0.01f;
                 rightRayRenderer.positionCount = 2;
@@ -161,7 +161,7 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
                 jumpingPositionPreview.GetComponent<MeshRenderer>().material = previewMaterial;
                 jumpingPositionPreview.SetActive(false); // hide
 
-                jumpingPersonPreview = Instantiate(Resources.Load("Resources/Prefabs/RealisticAvatar.prefab"), startPosition, startRotation) as GameObject;
+                jumpingPersonPreview = Instantiate(Resources.Load("RealisticAvatar.prefab"), startPosition, startRotation) as GameObject;
                 jumpingPersonPreview.layer = LayerMask.NameToLayer("Ignore Raycast");
                 jumpingPersonPreview.SetActive(false);
 
