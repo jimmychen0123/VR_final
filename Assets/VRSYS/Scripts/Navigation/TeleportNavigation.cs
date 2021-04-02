@@ -53,6 +53,7 @@ namespace Vrsys
             }
             else
             {
+                this.gripButton = (bool)stream.ReceiveNext();
                 //int p = (int)stream.ReceiveNext();
                 //press = p;
                 //if (press != 0)

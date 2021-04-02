@@ -15,12 +15,12 @@ C:/Users/jimmy/Documents/GitHub/VR_final
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55415
+56874
 Successfully changed project path to: C:/Users/jimmy/Documents/GitHub/VR_final
 C:/Users/jimmy/Documents/GitHub/VR_final
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 81.32 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 1.53 ms.
+Refreshing native plugins compatible for Editor in 68.32 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 1.15 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/jimmy/Documents/GitHub/VR_final/Assets
@@ -35,32 +35,32 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56776
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006030 seconds.
+Registered in 0.003200 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 43.88 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+Refreshing native plugins compatible for Editor in 43.38 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.473 seconds
+- Completed reload, in  2.144 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.012726 seconds.
+Registered in 0.007256 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 44.71 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+Refreshing native plugins compatible for Editor in 45.42 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
@@ -75,115 +75,60 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.065 seconds
+- Completed reload, in  0.991 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
 Refreshing native plugins compatible for Editor in 0.73 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.14 ms.
+Preloading 1 native plugins for Editor in 0.12 ms.
 Unloading 2021 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 92.0 MB.
 System memory in use after: 92.1 MB.
 
 Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 2434.
-Total: 2.876300 ms (FindLiveObjects: 0.293000 ms CreateObjectMapping: 0.103900 ms MarkObjects: 2.390200 ms  DeleteObjects: 0.087300 ms)
+Total: 2.861100 ms (FindLiveObjects: 0.250400 ms CreateObjectMapping: 0.053300 ms MarkObjects: 2.469800 ms  DeleteObjects: 0.086500 ms)
 
 ========================================================================
 Received Import Request.
   path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
   artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e2134dacd3441f61806250f07b5be2a') in 0.213013 seconds
-  Import took 0.218973 seconds .
+Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13fc7c24c8dcad72a651da4e1859efff') in 0.187108 seconds
+  Import took 0.191233 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.483526 seconds.
-  path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
-  artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '818a1a0df0ca10d72373b2c736dbc700') in 0.065575 seconds
-  Import took 0.070592 seconds .
+  Time since last request: 0.000301 seconds.
+  path: Assets/Tutorial/Resources/Avatars/AvatarTutorial.prefab
+  artifactKey: Guid(74b58d1e7dc1c314bb242853162f9609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tutorial/Resources/Avatars/AvatarTutorial.prefab using Guid(74b58d1e7dc1c314bb242853162f9609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '029a97138f6abd5b4942ab3813a35c6d') in 0.060580 seconds
+  Import took 0.064403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 96.996579 seconds.
+  path: Assets/Tutorial/Resources/ViewingSetups/ViewingSetupTutorial.prefab
+  artifactKey: Guid(81d1e57f805260b48a9d3794e4d8a07a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tutorial/Resources/ViewingSetups/ViewingSetupTutorial.prefab using Guid(81d1e57f805260b48a9d3794e4d8a07a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66de382f27a7b2bcf8e52c2b036bb301') in 0.029357 seconds
+  Import took 0.034097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.329267 seconds.
+  path: Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab
+  artifactKey: Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab using Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afc3a692f04a86ecc2590f7439776a6b') in 0.028325 seconds
+  Import took 0.032421 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.019404 seconds.
+Registered in 0.014654 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.74 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.39 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\jimmy\Documents\GitHub\VR_final\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\jimmy\Documents\GitHub\VR_final\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.108 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.89 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.20 ms.
-Unloading 1990 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.5 MB.
-System memory in use after: 94.5 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2444.
-Total: 2.772600 ms (FindLiveObjects: 0.310400 ms CreateObjectMapping: 0.092500 ms MarkObjects: 2.295100 ms  DeleteObjects: 0.072900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 153.618899 seconds.
-  path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
-  artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67bac09d5a3d5b1e993a31ec025fe763') in 0.155781 seconds
-  Import took 0.161126 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.543143 seconds.
-  path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
-  artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56b5373167c301b36b76f255bf211904') in 0.066628 seconds
-  Import took 0.071626 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.851135 seconds.
-  path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
-  artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15d42fce254926d5709c270d43faa686') in 0.064560 seconds
-  Import took 0.069753 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.602234 seconds.
-  path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
-  artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeeda169cb42386ca404e844ad3266d5') in 0.064913 seconds
-  Import took 0.069936 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.148211 seconds.
-  path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
-  artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe95ed172ebc404bd1f516578392cf9a') in 0.062775 seconds
-  Import took 0.068466 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016618 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 0.78 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.15 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -195,35 +140,98 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.902 seconds
+- Completed reload, in  0.884 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.78 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 0.77 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.13 ms.
 Unloading 1990 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.7 MB.
-System memory in use after: 94.8 MB.
+System memory in use before: 94.6 MB.
+System memory in use after: 94.7 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2444.
+Total: 2.672100 ms (FindLiveObjects: 0.442800 ms CreateObjectMapping: 0.091900 ms MarkObjects: 2.054300 ms  DeleteObjects: 0.081200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 712.165080 seconds.
+  path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
+  artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70fb1584600066dc2c11142f1db24262') in 0.153529 seconds
+  Import took 0.157723 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.403838 seconds.
+  path: Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab
+  artifactKey: Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab using Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f08e021ea77ca5435a93083e99248b05') in 0.039129 seconds
+  Import took 0.043422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.470790 seconds.
+  path: Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab
+  artifactKey: Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab using Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cc330ebb25667aeb701c04a7c892207') in 0.030759 seconds
+  Import took 0.036994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.354431 seconds.
+  path: Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab
+  artifactKey: Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab using Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97916ff3814538661b837ed96f1a99bd') in 0.030773 seconds
+  Import took 0.035391 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017618 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.54 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.28 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\jimmy\Documents\GitHub\VR_final\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\jimmy\Documents\GitHub\VR_final\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.357 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.49 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.18 ms.
+Unloading 1990 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.8 MB.
+System memory in use after: 94.9 MB.
 
 Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2448.
-Total: 2.721400 ms (FindLiveObjects: 0.386700 ms CreateObjectMapping: 0.072800 ms MarkObjects: 2.184800 ms  DeleteObjects: 0.075700 ms)
+Total: 3.496600 ms (FindLiveObjects: 0.599000 ms CreateObjectMapping: 0.058200 ms MarkObjects: 2.756100 ms  DeleteObjects: 0.080000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 124.817648 seconds.
+  Time since last request: 60.247513 seconds.
   path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
   artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4301a29088bc3753685928a2036cc5c0') in 0.148030 seconds
-  Import took 0.152118 seconds .
+Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13edae2c44e58ec27bfc54c252cca6ab') in 0.247851 seconds
+  Import took 0.255410 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.018947 seconds.
+Registered in 0.012353 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.17 ms.
+Refreshing native plugins compatible for Editor in 1.90 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.34 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
@@ -234,58 +242,35 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.911 seconds
+- Completed reload, in  1.399 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.78 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.14 ms.
-Unloading 1990 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.4 MB.
-System memory in use after: 95.5 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2452.
-Total: 2.318900 ms (FindLiveObjects: 0.303200 ms CreateObjectMapping: 0.089900 ms MarkObjects: 1.847500 ms  DeleteObjects: 0.077100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015820 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.78 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.55 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\jimmy\Documents\GitHub\VR_final\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\jimmy\Documents\GitHub\VR_final\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.411 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.55 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 1.77 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.28 ms.
 Unloading 1990 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 95.8 MB.
+System memory in use before: 95.6 MB.
+System memory in use after: 95.7 MB.
 
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2455.
-Total: 5.158600 ms (FindLiveObjects: 0.834500 ms CreateObjectMapping: 0.103100 ms MarkObjects: 4.056800 ms  DeleteObjects: 0.156300 ms)
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2452.
+Total: 14.137400 ms (FindLiveObjects: 1.352000 ms CreateObjectMapping: 0.282400 ms MarkObjects: 12.044500 ms  DeleteObjects: 0.446900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.866809 seconds.
+  path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
+  artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7e27145d19c55c291f97fcfc45ea26b') in 0.352481 seconds
+  Import took 0.364538 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.008002 seconds.
+Registered in 0.016479 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.80 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.48 ms.
+Refreshing native plugins compatible for Editor in 0.77 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.15 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
@@ -296,78 +281,61 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.376 seconds
+- Completed reload, in  0.881 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.21 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.26 ms.
+Refreshing native plugins compatible for Editor in 0.83 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.16 ms.
 Unloading 1990 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.3 MB.
-System memory in use after: 95.4 MB.
+System memory in use before: 95.8 MB.
+System memory in use after: 95.9 MB.
 
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2458.
-Total: 5.480700 ms (FindLiveObjects: 0.898600 ms CreateObjectMapping: 0.115400 ms MarkObjects: 4.271900 ms  DeleteObjects: 0.189800 ms)
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2456.
+Total: 2.942800 ms (FindLiveObjects: 0.576100 ms CreateObjectMapping: 0.103400 ms MarkObjects: 2.177600 ms  DeleteObjects: 0.084000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 346.624746 seconds.
+  Time since last request: 74.997040 seconds.
   path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
   artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b966d3732cdd919f8cca4bb1e4fab90') in 0.151174 seconds
-  Import took 0.155764 seconds .
+Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48c6261b547789851d5455b6e796a5d4') in 0.239160 seconds
+  Import took 0.243579 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.090346 seconds.
-  path: Assets/Photon/PhotonVoice/Demos/DemoVoiceUI/Media/barsHorizontal.png
-  artifactKey: Guid(055458b32c82031478126740cfeff8b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonVoice/Demos/DemoVoiceUI/Media/barsHorizontal.png using Guid(055458b32c82031478126740cfeff8b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f2fe769eb4ff602308a457cd9188698') in 0.121950 seconds
-  Import took 0.125882 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000235 seconds.
-  path: Assets/Photon/PhotonVoice/Demos/DemoVoicePun/Standard Assets/CrossPlatformInput/Sprites/ButtonThumbstickOverSprite.png
-  artifactKey: Guid(5485e2f56028a3c4cb54f5caa167377e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonVoice/Demos/DemoVoicePun/Standard Assets/CrossPlatformInput/Sprites/ButtonThumbstickOverSprite.png using Guid(5485e2f56028a3c4cb54f5caa167377e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6c28b26427e62e34fdb87dbf2d441bf') in 0.044526 seconds
-  Import took 0.048762 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000589 seconds.
-  path: Assets/Photon/PhotonVoice/Demos/DemoVoicePun/Standard Assets/CrossPlatformInput/Sprites/ButtonThumbstickUpSprite.png
-  artifactKey: Guid(9866a92691696b346901281f2b329034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonVoice/Demos/DemoVoicePun/Standard Assets/CrossPlatformInput/Sprites/ButtonThumbstickUpSprite.png using Guid(9866a92691696b346901281f2b329034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb751cf38432e74520f24fa05e4294ee') in 0.043497 seconds
-  Import took 0.047379 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 267.950139 seconds.
-  path: Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab
-  artifactKey: Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab using Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bffc45cf30a92c8e0e5011be1314a8b') in 0.046129 seconds
-  Import took 0.050575 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.263841 seconds.
-  path: Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab
-  artifactKey: Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/ViewingSetups/ViewingSetupHMD.prefab using Guid(9e0e0556130fdcc49a039462cc808cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c418e3c7bd5b4f2957b3e05f5869ea1d') in 0.033206 seconds
-  Import took 0.039347 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.997512 seconds.
+  Time since last request: 1.295311 seconds.
   path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
   artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1cc6bb572f30671292d1591e7b587e8') in 0.071061 seconds
-  Import took 0.076123 seconds .
+Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48c6261b547789851d5455b6e796a5d4') in 0.064948 seconds
+  Import took 0.069034 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 9.216428 seconds.
-  path: Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab
-  artifactKey: Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tutorial/Resources/Avatars/AvatarHMD.prefab using Guid(f3ae49da852ff924995fb026cdedb136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac461e1f795c1defd877d5f91cb83e96') in 0.073927 seconds
-  Import took 0.078728 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016530 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\jimmy\Documents\GitHub\VR_final\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\jimmy\Documents\GitHub\VR_final\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.932 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.82 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Unloading 1990 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.5 MB.
+System memory in use after: 95.6 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2460.
+Total: 3.306100 ms (FindLiveObjects: 0.584300 ms CreateObjectMapping: 0.221800 ms MarkObjects: 2.425400 ms  DeleteObjects: 0.072700 ms)
 
