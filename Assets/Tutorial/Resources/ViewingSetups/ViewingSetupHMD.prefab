@@ -179,7 +179,6 @@ GameObject:
   - component: {fileID: 9086636032033606818}
   - component: {fileID: 6945706098443384844}
   - component: {fileID: 2995766680775033612}
-  - component: {fileID: 3363963088463403244}
   m_Layer: 0
   m_Name: ViewingSetupHMD
   m_TagString: Untagged
@@ -292,7 +291,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5624738095747715005}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e793add759dc21c4798a5a8e382b94c8, type: 3}
   m_Name: 
@@ -309,18 +308,6 @@ MonoBehaviour:
   considerTargetNormal: 1
   maxDeviationAngle: 65
   posePreviewGeometry: {fileID: 58528523657214712, guid: 9d7c16ebe6798c44f854006aacf18f78, type: 3}
---- !u!114 &3363963088463403244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5624738095747715005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa87cc283339ad943ae013722b520d13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6476231268184786009
 GameObject:
   m_ObjectHideFlags: 0

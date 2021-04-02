@@ -11,7 +11,7 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     int press = 0;
     public GameObject rightHand;
     public LineRenderer lineRenderer;
-    //private UnityEngine.XR.InputDevice rightXRInputDevice;
+    private UnityEngine.XR.InputDevice rightXRInputDevice;
     public  XRController rightXRController;
     public Vector3 endRay;
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -74,6 +74,13 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
             Debug.Log("xr controller: " + rightXRController);
 
         }
+        if (PhotonNetwork.IsMasterClient)
+        {
+            Debug.Log("I am the master");
+            gameObject.GetComponentInParent<Vrsys.TeleportNavigation>().enabled = true;
+
+
+        }
 
 
 
@@ -84,7 +91,7 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     // Update is called once per frame
     void Update()
     {
-
+        
 
         if (photonView.IsMine)
         {
