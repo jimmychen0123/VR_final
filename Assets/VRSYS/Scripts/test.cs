@@ -248,6 +248,7 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
                     &&
                     triggerPressed)
                 {
+                    Debug.Log("Start teleport");
                     //https://gamedevbeginner.com/coroutines-in-unity-when-and-how-to-use-them/
                     StartCoroutine(Teleport());
                 }//end if trigger button pressed
@@ -383,6 +384,7 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     {
 
         jumpingTargetPosition = hit.point;
+        Debug.Log("Jumping position: " + jumpingTargetPosition);
 
     }// end setJumpingPosition()
 
@@ -404,8 +406,8 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     private void UpdateUserPositionDirection()
     {
 
-        gameObject.transform.position = jumpingTargetPosition;
-        gameObject.transform.rotation = rotTowardsHit;
+        gameObject.transform.parent.position = jumpingTargetPosition;
+        gameObject.transform.parent.rotation = rotTowardsHit;
     }
     // YOUR CODE - END 
 
