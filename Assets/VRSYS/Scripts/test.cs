@@ -62,16 +62,16 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
         }
         else
         {
-            this.triggerPressed = (bool)stream.ReceiveNext();
-            RaycastHit rh = (RaycastHit)stream.ReceiveNext();
-            Debug.Log("receive: " + this.triggerPressed);
-            if (this.triggerPressed)
-            {
-                Debug.Log("Did you see the ray?");
-                rightRayRenderer.enabled = true;
-                rightRayRenderer.positionCount = 2;
-                rightRayRenderer.SetPosition(0, rightHand.transform.position);
-                rightRayRenderer.SetPosition(1, rh.point);
+            //this.triggerPressed = (bool)stream.ReceiveNext();
+            //RaycastHit rh = (RaycastHit)stream.ReceiveNext();
+            //Debug.Log("receive: " + this.triggerPressed);
+            //if (this.triggerPressed)
+            //{
+            //    Debug.Log("Did you see the ray?");
+            //    rightRayRenderer.enabled = true;
+            //    rightRayRenderer.positionCount = 2;
+            //    rightRayRenderer.SetPosition(0, rightHand.transform.position);
+            //    rightRayRenderer.SetPosition(1, rh.point);
 
 
 
@@ -79,8 +79,8 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
 
             else
             {
-                Debug.Log("Let's go together");
-                rightRayRenderer.enabled = false;
+                //Debug.Log("Let's go together");
+                //rightRayRenderer.enabled = false;
 
 
             }
