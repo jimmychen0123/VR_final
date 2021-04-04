@@ -75,15 +75,15 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
 
 
 
-            }
+            //}
 
-            else
-            {
+            //else
+            //{
                 //Debug.Log("Let's go together");
                 //rightRayRenderer.enabled = false;
 
 
-            }
+            //}
             //int p = (int)stream.ReceiveNext();
             //press = p;
             //if (press != 0)
