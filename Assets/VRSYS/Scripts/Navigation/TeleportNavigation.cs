@@ -42,11 +42,14 @@ namespace Vrsys
         private Quaternion animationTargetRot = Quaternion.identity;
 
         public GameObject posePreviewGeometry;
+        public float height = 1.0f;
 
         // Start is called before the first frame update
         protected override void Start()
         {
             base.Start();
+
+         
 
             rayRenderer = viewingSetupHMD.rightController.AddComponent<LineRenderer>();
             rayRenderer.name = "Ray Renderer";
@@ -129,7 +132,7 @@ namespace Vrsys
 
                 if (rayHit.collider != null) // something hit
                 {
-                    posePreview.transform.position = rayHit.point; // set preview pose position
+                    posePreview.transform.position = new Vector3 (rayHit.point.x, rayHit.point.y + height, rayHit.point.z); // set preview pose position
 
                     Quaternion newRot = Quaternion.LookRotation(viewingSetup.mainCamera.transform.forward, Vector3.up);
                     posePreview.transform.rotation = Quaternion.Euler(0f, newRot.eulerAngles.y, 0f); // set initial preview pose orientation (can be updated later)
