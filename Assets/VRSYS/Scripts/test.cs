@@ -15,6 +15,10 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     public XRController rightXRController;
     public Vector3 endRay;
 
+
+    private bool gripButton;
+    private GameObject posePreview;
+
     //public LayerMask myLayerMask = -1; // -1 everything
 
     //public enum IntersectionMode { Line, Parabola };
@@ -33,12 +37,12 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     //public float maxDeviationAngle = 65.0f;
 
     private GameObject intersectionSphere;
-    private GameObject posePreview;
+    //private GameObject posePreview;
 
     private LineRenderer rayRenderer;
     //private RaycastHit rayHit;
 
-    private bool gripButton = false;
+    //private bool gripButton = false;
     //private bool validTargetPoseFlag = false;
     //private bool rotTargetPoseFlag = false;
 
@@ -56,26 +60,35 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     {
         if (stream.IsWriting)
         {
-            stream.SendNext(press);
-            stream.SendNext(endRay);
+            stream.SendNext(gripButton);
+            stream.SendNext(posePreview.transform);
+
+            //stream.SendNext(press);
+            //stream.SendNext(endRay);
+
+            
         }
         else
         {
             int p = (int)stream.ReceiveNext();
             press = p;
+
+            bool b = (bool)stream.ReceiveNext();
+            gripButton = b;
+
             if (press != 0)
             {
                 Debug.Log("receive: " + press);
             }
 
-            Vector3 end = (Vector3)stream.ReceiveNext();
-            if (press == 1)
+            //Vector3 end = (Vector3)stream.ReceiveNext();
+            if (gripButton)
             {
 
                 lineRenderer.enabled = true;
                 lineRenderer.positionCount = 2;
                 lineRenderer.SetPosition(0, rightHand.transform.position);
-                lineRenderer.SetPosition(1, endRay);
+                lineRenderer.SetPosition(1, posePreview.transform.position);
 
             }
             else
@@ -94,6 +107,9 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     // Start is called before the first frame update
     void Start()
     {
+
+        gripButton = gameObject.GetComponentInParent<Vrsys.TeleportNavigation>().gripButton;
+        posePreview = gameObject.GetComponentInParent<Vrsys.TeleportNavigation>().posePreview;
         press = 0;
         rightHand = GetComponent<Vrsys.AvatarHMDAnatomy>().handRight;
         lineRenderer = rightHand.GetComponent<LineRenderer>();

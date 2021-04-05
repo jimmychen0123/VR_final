@@ -24,13 +24,13 @@ namespace Vrsys
         public float maxDeviationAngle = 65.0f;
 
         private GameObject intersectionSphere;
-        private GameObject posePreview;
+        public GameObject posePreview;
         private UnityEngine.XR.InputDevice rightXRInputDevice;
 
         private LineRenderer rayRenderer;
         private RaycastHit rayHit;
 
-        private bool gripButton = false;
+        public bool gripButton = false;
         private bool validTargetPoseFlag = false;
         private bool rotTargetPoseFlag = false;
 
