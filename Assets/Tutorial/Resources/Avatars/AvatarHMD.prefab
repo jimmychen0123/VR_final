@@ -349,12 +349,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHand: {fileID: 0}
   lineRenderer: {fileID: 0}
+  rightXRController: {fileID: 0}
   endRay: {x: 0, y: 0, z: 0}
-  triggerPressed: 0
-  triggerReleased: 0
-  myLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  posePreview: {fileID: 0}
   posePreviewGeometry: {fileID: 58528523657214712, guid: 9d7c16ebe6798c44f854006aacf18f78, type: 3}
 --- !u!120 &6280972639402313524
 LineRenderer:

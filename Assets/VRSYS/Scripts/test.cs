@@ -15,9 +15,8 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     public XRController rightXRController;
     public Vector3 endRay;
 
-
     private bool gripButton;
-    private GameObject posePreview;
+    public GameObject posePreview;
 
     //public LayerMask myLayerMask = -1; // -1 everything
 
@@ -60,8 +59,12 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     {
         if (stream.IsWriting)
         {
-            stream.SendNext(gripButton);
-            stream.SendNext(posePreview.transform);
+            if (PhotonNetwork.IsMasterClient)
+            {
+                stream.SendNext(gripButton);
+                stream.SendNext(posePreview.transform.position);
+            }
+            
 
             //stream.SendNext(press);
             //stream.SendNext(endRay);
@@ -70,8 +73,8 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
         }
         else
         {
-            int p = (int)stream.ReceiveNext();
-            press = p;
+            //int p = (int)stream.ReceiveNext();
+            //press = p;
 
             bool b = (bool)stream.ReceiveNext();
             gripButton = b;
@@ -81,14 +84,14 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
                 Debug.Log("receive: " + press);
             }
 
-            //Vector3 end = (Vector3)stream.ReceiveNext();
+            Vector3 end = (Vector3)stream.ReceiveNext();
             if (gripButton)
             {
 
                 lineRenderer.enabled = true;
                 lineRenderer.positionCount = 2;
                 lineRenderer.SetPosition(0, rightHand.transform.position);
-                lineRenderer.SetPosition(1, posePreview.transform.position);
+                lineRenderer.SetPosition(1, end);
 
             }
             else
@@ -108,8 +111,13 @@ public class test : MonoBehaviourPunCallbacks, IPunObservable
     void Start()
     {
 
-        gripButton = gameObject.GetComponentInParent<Vrsys.TeleportNavigation>().gripButton;
-        posePreview = gameObject.GetComponentInParent<Vrsys.TeleportNavigation>().posePreview;
+        if (PhotonNetwork.IsMasterClient)
+        {
+            gripButton = gameObject.GetComponentInParent<Vrsys.TeleportNavigation>().gripButton;
+            posePreview = gameObject.GetComponentInParent<Vrsys.TeleportNavigation>().posePreview;
+
+        }
+       
         press = 0;
         rightHand = GetComponent<Vrsys.AvatarHMDAnatomy>().handRight;
         lineRenderer = rightHand.GetComponent<LineRenderer>();
